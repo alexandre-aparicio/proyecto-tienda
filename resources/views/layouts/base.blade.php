@@ -34,7 +34,7 @@
 </head>
 
                         
-@if (Route::is('dashboard'))
+@if (Route::is('dashboard/main'))
    @include('dashboard.dash-components.top-header') 
    @yield('content') 
     

@@ -86,8 +86,12 @@ class CustomAuthController extends Controller
     public function dashboard()
     {
         if(Auth::check()){
-            if (Auth::user()->role == "admin" )
-            return view('dashboard.main-dash');
+
+            if (Auth::user()->role == "admin" ) {
+                
+                return Redirect('/dashboard/main');
+            }
+
             else {
                 return Redirect('/');
             }
