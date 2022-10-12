@@ -2,65 +2,70 @@
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+
 </p>
 
-## About Laravel
+## Sobre el Proyecto
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Se Trata de crear una página de comercio electrónico con en framework PHP Laravel. Esta tendrá un carro de la compra, diferentes categorias, un apartado de checkout, parte de comentarios del producto y los usuarios se podrán loguear.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Parte técnica
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Creado integramente con el Framework PHP Laravel y MySQL como gestor de base de datos relacional.
 
-## Learning Laravel
+- Elementos dinámicos con Javascript y JQuery. 
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- CSS Bootstrap
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Componentes del Blog
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+<p align="center"><a href="https://themefisher.com/"><img src="https://themefisher.com/images/logo/logo.svg" alt="Theme Fisher"></a></p>
 
-## Laravel Sponsors
+- Creado con una plantilla [ThemeFisher](https://themefisher.com/products/logbook) con licencia MIT  
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
+## Base de datos
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+Se crea la base de datos MySQL con el sistema de migraciones. Se compone de las siguientes tablas.
 
-## Contributing
+- usuarios
+- carro de la compra
+- categorias
+- productos
+- ventas
+- suscriptores
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Live Preview
 
-## Code of Conduct
+- [Ver el Blog en funcionamiento](https://aleaparicio.es/proyecto-blog/public).
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Funcionalidades
 
-## Security Vulnerabilities
+### Páginas
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+#### Apartado Usuario 
+- Loguin ✔ [How](https://www.positronx.io/laravel-custom-authentication-login-and-registration-tutorial/)
+- Registro ✔ [How](https://www.positronx.io/laravel-custom-authentication-login-and-registration-tutorial/)
+- Mail de confirmación de registro ✔ [How](https://dev.to/shanisingh03/how-to-send-email-in-laravel-9--13db)
+- Recuperación de contraseña ❌
 
-## License
+#### Apartado Panel de Control
+- Panel de Usuario ✔
+- Paginación [How](https://codeanddeploy.com/blog/laravel/laravel-8-pagination-example-using-bootstrap-5)✔
+
+#### Apartado Páginas
+- Menú Superior ✔
+- Main Home ✔
+- Main Ver productos por categoría ❌ Pendiante de hacer
+- Main Ver productos por más vendidos ❌
+- Elementos de la cesta de la compra ❌
+- Buscador con consulta asíncrona Ajax ❌
+
+
+#### Footer
+- Formulario de suscripción ❌
+- Enlaces dinámicos ❌
+
+## Licencia
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
