@@ -36,14 +36,16 @@
                         
 @if (Route::is('dashboard'))
    @include('dashboard.dash-components.top-header') 
+   @yield('content') 
     
 @else
     @include('common-components.top-header') 
     @include('common-components.top-nav-menu')
     @include('common-components.footer')
+    @yield('content') 
 @endif
                            
 
 
 
-@yield('content') 
+

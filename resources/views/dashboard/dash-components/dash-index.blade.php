@@ -1,5 +1,3 @@
-@extends ('layouts.base')
-@section('content')
 <section class="container-fluid mt-3">
    <div class="row">
       <div class="col-2 p-2 ">
@@ -60,7 +58,7 @@
                               </tr>
                            </thead>
                            <tbody>
-                              
+                           	@foreach ($articulos as $articulo)
                               <tr>                                 
                                  <td><a href="#" class="text-body fw-bold">#MB2540</a> </td>
                                  <td>Neal Matthews</td>
@@ -82,7 +80,7 @@
                                     </button>
                                  </td>                                 
                               </tr> 
-                                                        
+                              @endforeach                             
                            </tbody>
                         </table>
                      </div>
@@ -399,4 +397,3 @@
       </div>
    </div>
 </section>
-@endsection  
