@@ -32,7 +32,18 @@
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 </head>
-@include('common-components.top-header')
-@include('common-components.top-nav-menu')
+
+                        
+@if (Route::is('dashboard'))
+   @include('dashboard.dash-components.top-header') 
+    
+@else
+    @include('common-components.top-header') 
+    @include('common-components.top-nav-menu')
+    @include('common-components.footer')
+@endif
+                           
+
+
+
 @yield('content') 
-@include('common-components.footer')

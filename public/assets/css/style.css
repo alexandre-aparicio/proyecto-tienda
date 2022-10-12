@@ -607,8 +607,8 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
   border-bottom: 1px solid #dedede;
 }
 .top-header .dropdown-menu {
-  left: auto;
-  right: 0;
+  
+  right: auto;
   max-width: 300px;
 }
 @media (max-width: 480px) {
