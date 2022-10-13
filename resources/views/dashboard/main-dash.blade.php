@@ -51,6 +51,7 @@
                            <thead class="table-light">
                               <tr>                                 
                                  <th>Artículo ID</th>
+                                 <th>Imagen</th>
                                  <th>Nombre</th>
                                  <th>Fecha</th>
                                  <th>Precio</th>
@@ -60,18 +61,15 @@
                               </tr>
                            </thead>
                            <tbody>
-                              
+                              @foreach ($articulos as $articulo)
                               <tr>                                 
                                  <td><a href="#" class="text-body fw-bold">#MB2540</a> </td>
-                                 <td>Neal Matthews</td>
+                                 <td class=""><img src="{{ asset('assets/images/shop/products') }}/{{ $articulo->imagen_url }}" class="rounded-circle " alt=""></td>
+                                 <td>{{ $articulo->nombre }}</td>
+                                 <td>{{ $articulo->created_at }}</td>
+                                 <td>{{ $articulo->precio }}</td>
                                  <td>
-                                    07 Oct, 2019
-                                 </td>
-                                 <td>
-                                    $400
-                                 </td>
-                                 <td>
-                                    <span class="badge rounded-pill bg-success">Paid</span>
+                                    <span class="badge rounded-pill bg-success">{{ $articulo->cat_nombre }}</span>
                                  </td>
                                  <td>
                                     <i class="fab fa-cc-mastercard me-1"></i> Mastercard
@@ -82,7 +80,7 @@
                                     </button>
                                  </td>                                 
                               </tr> 
-                                                        
+                               @endforeach                         
                            </tbody>
                         </table>
                      </div>

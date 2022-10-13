@@ -30,4 +30,4 @@ Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout')
 
 //Rutas dashboard
 
-Route::get('/dashboard/main', [ProductoController::class, 'dashArticles'])->name('dashboard.articulos');
+Route::get('/dashboard/main', [ProductoController::class, 'dashArticles'])->name('dashboard-main');

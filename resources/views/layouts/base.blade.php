@@ -32,18 +32,17 @@
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 </head>
-PEPE
                         
-@if (Route::is('dashboard/main'))
+@if (Route::is('dashboard-main'))
    @include('dashboard.dash-components.top-header') 
-   
+   @yield('content') 
    @include('common-components.footer')
-    
-@else
+ @else
     @include('common-components.top-header') 
     @include('common-components.top-nav-menu')
     @include('common-components.footer')
-    @yield('content') 
+    @yield('content')    
+
 @endif
                            
 

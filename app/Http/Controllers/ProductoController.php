@@ -38,11 +38,11 @@ class ProductoController extends Controller
     {
         
         // Esta es la formula para emplear el paginate con un join
-        $productos = Producto::join('categorias', 'productos.categoria_id', '=', 'categorias.id')->select('productos.*' ,'categorias.*')->paginate(5);
+        $productos = Producto::join('categorias', 'productos.categoria_id', '=', 'categorias.id')->select('productos.*' ,'categorias.nombre AS cat_nombre')->paginate(5);
                
         
 
 
-        return view('dashboard.articulos', ['articulos'=>$productos]);        
+        return view('dashboard.main-dash', ['articulos'=>$productos]);        
     }
 }
