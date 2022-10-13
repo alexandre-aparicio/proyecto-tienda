@@ -2,103 +2,42 @@
 @section('content')
 
 <div class="container">
+
 <div class="row mt-20">
 			<div class="col-md-5">
-				<div class="single-product-slider">
-					<div id="carousel-custom" class="carousel slide" data-ride="carousel">
-						<div class="carousel-outer">
-							<!-- me art lab slider -->
-							<div class="carousel-inner ">
-								<div class="item">
-									<img src="images/shop/single-products/product-1.jpg" alt="" data-zoom-image="images/shop/single-products/product-1.jpg">
-								</div>
-								<div class="item">
-									<img src="images/shop/single-products/product-2.jpg" alt="" data-zoom-image="images/shop/single-products/product-2.jpg">
-								</div>
-								
-								<div class="item active">
-									<img src="images/shop/single-products/product-3.jpg" alt="" data-zoom-image="images/shop/single-products/product-3.jpg">
-								</div>
-								<div class="item">
-									<img src="images/shop/single-products/product-4.jpg" alt="" data-zoom-image="images/shop/single-products/product-4.jpg">
-								</div>
-								<div class="item">
-									<img src="images/shop/single-products/product-5.jpg" alt="" data-zoom-image="images/shop/single-products/product-5.jpg">
-								</div>
-								<div class="item">
-									<img src="images/shop/single-products/product-6.jpg" alt="" data-zoom-image="images/shop/single-products/product-6.jpg">
-								</div>
-								
-							</div>
-							
-							<!-- sag sol -->
-							<a class="left carousel-control" href="#carousel-custom" data-slide="prev">
-								<i class="tf-ion-ios-arrow-left"></i>
-							</a>
-							<a class="right carousel-control" href="#carousel-custom" data-slide="next">
-								<i class="tf-ion-ios-arrow-right"></i>
-							</a>
-						</div>
-						
-						<!-- thumb -->
-						<ol class="carousel-indicators mCustomScrollbar meartlab">
-							<li data-target="#carousel-custom" data-slide-to="0" class="">
-								<img src="images/shop/single-products/product-1.jpg" alt="">
-							</li>
-							<li data-target="#carousel-custom" data-slide-to="1" class="">
-								<img src="images/shop/single-products/product-2.jpg" alt="">
-							</li>
-							<li data-target="#carousel-custom" data-slide-to="2" class="active">
-								<img src="images/shop/single-products/product-3.jpg" alt="">
-							</li>
-							<li data-target="#carousel-custom" data-slide-to="3" class="">
-								<img src="images/shop/single-products/product-4.jpg" alt="">
-							</li>
-							<li data-target="#carousel-custom" data-slide-to="4" class="">
-								<img src="images/shop/single-products/product-5.jpg" alt="">
-							</li>
-							<li data-target="#carousel-custom" data-slide-to="5" class="">
-								<img src="images/shop/single-products/product-6.jpg" alt="">
-							</li>
-							<li data-target="#carousel-custom" data-slide-to="6">
-								<img src="images/shop/single-products/product-7.jpg" alt="">
-							</li>
-						</ol>
-					</div>
-				</div>
+				<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{ asset('assets/images/shop/products') }}/{{ $datos[0]->imagen_url }}.jpg" class="d-block w-100" alt="...">
+    </div>
+    @foreach ($imagenes as $imagen)
+    <div class="carousel-item">
+      <img src="{{ asset('assets/images/shop/products') }}/{{ $imagen->imagen_url }}.jpg" class="d-block w-100" alt="...">
+    </div>
+    @endforeach
+    
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>				
 			</div>
 			<div class="col-md-7">
 				<div class="single-product-details">
-					<h2>Eclipse Crossbody</h2>
-					<p class="product-price">$300</p>
+					<h2>{{$datos[0]->nombre}}</h2>
+					<p class="product-price">{{$datos[0]->precio}}</p>
 					
-					<p class="product-description mt-20">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum ipsum dicta quod, quia doloremque aut deserunt commodi quis. Totam a consequatur beatae nostrum, earum consequuntur? Eveniet consequatur ipsum dicta recusandae.
-					</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, velit, sunt temporibus, nulla accusamus similique sapiente tempora, at atque cumque assumenda minus asperiores est esse sequi dolore magnam. Debitis, explicabo.</p>
-					<div class="color-swatches">
-						<span>color:</span>
-						<ul>
-							<li>
-								<a href="#!" class="swatch-violet"></a>
-							</li>
-							<li>
-								<a href="#!" class="swatch-black"></a>
-							</li>
-							<li>
-								<a href="#!" class="swatch-cream"></a>
-							</li>
-						</ul>
+					<div class="product-description mt-20">
+						{{ $datos[0]->descripcion }}
 					</div>
-					<div class="product-size">
-						<span>Size:</span>
-						<select class="form-control">
-							<option>S</option>
-							<option>M</option>
-							<option>L</option>
-							<option>XL</option>
-						</select>
-					</div>
+					
+					
+					
 					<div class="product-quantity">
 						<span>Quantity:</span>
 						<div class="product-quantity-slider">

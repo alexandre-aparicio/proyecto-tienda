@@ -35,11 +35,14 @@ class ProductoController extends Controller
     public function show( Producto $id)
     {
         
-        $datos = [];
-
-             
         
-        return view('single-product', $datos);
+
+             $datos = Producto::where('id', $id->id)->get();
+             $imagenes = DB::table('imagen_productos')->where('producto_id', $id->id)->get();
+             
+
+        
+        return view('single-product', ['datos'=>$datos, 'imagenes'=>$imagenes]);
     }
 
     public function dashArticles()
