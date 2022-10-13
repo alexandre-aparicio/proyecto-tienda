@@ -16,9 +16,10 @@ return new class extends Migration
         Schema::create('carros', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->integer('cantidad');
-            $table->unsignedInteger('producto_id');     
-            $table->foreign('producto_id')->references('id')->on('productos');       
+            $table->unsignedInteger('usuario_id'); 
+            $table->unsignedInteger('detcarros_id');     
+            $table->foreign('user_id')->references('id')->on('users');  
+            $table->foreign('detcarro_id')->references('id')->on('users');     
         });
     }
 

@@ -15,10 +15,11 @@ return new class extends Migration
     {
         Schema::create('productos', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('categoria_id'); 
             $table->timestamps();
             $table->double('precio', 8, 2);
             $table->string('nombre', 300);
-            $table->unsignedInteger('categoria_id'); 
+            $table->string('descripcion');            
             $table->string('imagen_url', 300); 
             $table->foreign('categoria_id')->references('id')->on('categorias');           
                       

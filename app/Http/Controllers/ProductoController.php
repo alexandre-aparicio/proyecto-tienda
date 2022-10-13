@@ -8,6 +8,8 @@ use App\Models\Producto;
 use App\Models\Categoria;
 use App\Models\Carro;
 
+use Illuminate\Support\Facades\Auth;
+
 class ProductoController extends Controller
 {
     public function index()
@@ -36,6 +38,11 @@ class ProductoController extends Controller
 
     public function dashArticles()
     {
+        if (Auth::user()->role !== "admin" ) {
+                
+               return Redirect('/');
+            }
+
         
         // Esta es la formula para emplear el paginate con un join
         $productos = Producto::join('categorias', 'productos.categoria_id', '=', 'categorias.id')->select('productos.*' ,'categorias.nombre AS cat_nombre')->paginate(5);

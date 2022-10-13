@@ -89,7 +89,7 @@ class CustomAuthController extends Controller
 
             if (Auth::user()->role == "admin" ) {
                 
-                return route('dashboard-main');
+                return Redirect(route('dashboard-main'));
             }
 
             else {

@@ -3,6 +3,11 @@
    .cliente img {
    width: 50px;
    }	
+   
+   .product_table img {
+   width: 45px;
+   }  
+
 </style>
 <section class="top-header">
    <div class="container-fluid mt-3">

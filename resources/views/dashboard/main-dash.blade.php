@@ -64,7 +64,7 @@
                               @foreach ($articulos as $articulo)
                               <tr>                                 
                                  <td><a href="#" class="text-body fw-bold">#MB2540</a> </td>
-                                 <td class=""><img src="{{ asset('assets/images/shop/products') }}/{{ $articulo->imagen_url }}" class="rounded-circle " alt=""></td>
+                                 <td class="product_table"><img src="{{ asset('assets/images/shop/products') }}/{{ $articulo->imagen_url }}"  alt=""></td>
                                  <td>{{ $articulo->nombre }}</td>
                                  <td>{{ $articulo->created_at }}</td>
                                  <td>{{ $articulo->precio }}</td>
