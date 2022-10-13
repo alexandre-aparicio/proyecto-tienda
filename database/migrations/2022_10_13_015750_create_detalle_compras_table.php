@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('detalle_compras', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('producto_id');                      
+            $table->unsignedInteger('producto_id');                
             $table->integer('cantidad');            
             $table->timestamps();
             $table->foreign('producto_id')->references('id')->on('productos');

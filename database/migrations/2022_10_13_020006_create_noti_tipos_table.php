@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('noti_tipo', function (Blueprint $table) {
+        Schema::create('noti_tipos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre', 300);
             $table->timestamps();

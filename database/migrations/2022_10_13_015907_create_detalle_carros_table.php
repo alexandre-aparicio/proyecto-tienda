@@ -16,13 +16,13 @@ return new class extends Migration
         Schema::create('detalle_carros', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('producto_id');
-            $table->unsignedInteger('carro_id');
+            
             $table->string('titulo', 300);
             $table->integer('cantidad');           
             $table->integer('consumado');
             $table->timestamps();
             $table->foreign('producto_id')->references('id')->on('productos');
-            $table->foreign('carro_id')->references('id')->on('carros');
+           
         });
     }
 

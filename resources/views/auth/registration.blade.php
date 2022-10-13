@@ -33,6 +33,7 @@
                         <label for="name">Nombre</label>
                         <input type="text" placeholder="Name" id="name" class="input is-primary" name="name"
                                     required autofocus>
+                                    <input type="hidden" id="rol" name="rol" value="0">
                                 @if ($errors->has('name'))
                                 <span class="text-danger">{{ $errors->first('name') }}</span>
                                 @endif

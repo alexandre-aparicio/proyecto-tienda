@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Producto;
 use App\Models\Categoria;
 use App\Models\Carro;
+use App\Models\User;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -14,16 +15,18 @@ class ProductoController extends Controller
 {
     public function index()
     {
+
         $productos = Producto::join('categorias', 'categorias.id', '=', 'productos.categoria_id')
         ->get(['productos.*', 'categorias.nombre AS categoria_nombre']); 
 
-        $categorias = Categoria::get();        
+        $categorias = Categoria::get(); 
+        /*       
         $carro = Carro::join('productos', 'carros.producto_id', '=', 'productos.id')
         ->join('categorias', 'productos.categoria_id', '=', 'categorias.id')
-        ->get(['productos.*', 'carros.cantidad', 'carros.id AS carro_id', 'categorias.nombre AS cat_nombre']); 
+        ->get(['productos.*', 'carros.id AS carro_id', 'categorias.nombre AS cat_nombre']); 
+        */
 
-
-        return view('index', ['categorias' => $categorias, 'categoria_act' => null, 'productos'=>$productos, 'carro'=>$carro]);        
+        return view('index', ['categorias' => $categorias, 'categoria_act' => null, 'productos'=>$productos]);        
     }
 
     public function show( Producto $id)
@@ -38,7 +41,7 @@ class ProductoController extends Controller
 
     public function dashArticles()
     {
-        if (Auth::user()->role !== "admin" ) {
+       if (Auth::user()->rol !== 1 ) {
                 
                return Redirect('/');
             }
@@ -46,10 +49,11 @@ class ProductoController extends Controller
         
         // Esta es la formula para emplear el paginate con un join
         $productos = Producto::join('categorias', 'productos.categoria_id', '=', 'categorias.id')->select('productos.*' ,'categorias.nombre AS cat_nombre')->paginate(5);
+        $usuarios = User::get();
                
         
 
 
-        return view('dashboard.main-dash', ['articulos'=>$productos]);        
+        return view('dashboard.main-dash', ['articulos'=>$productos, 'usuarios'=>$usuarios]);        
     }
 }

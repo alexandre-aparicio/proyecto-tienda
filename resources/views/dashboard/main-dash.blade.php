@@ -64,7 +64,7 @@
                               @foreach ($articulos as $articulo)
                               <tr>                                 
                                  <td><a href="#" class="text-body fw-bold">#MB2540</a> </td>
-                                 <td class="product_table"><img src="{{ asset('assets/images/shop/products') }}/{{ $articulo->imagen_url }}"  alt=""></td>
+                                 <td class="product_table"><img src="{{ asset('assets/images/shop/products') }}/{{ $articulo->imagen_url }}.jpg"  alt=""></td>
                                  <td>{{ $articulo->nombre }}</td>
                                  <td>{{ $articulo->created_at }}</td>
                                  <td>{{ $articulo->precio }}</td>
@@ -109,69 +109,17 @@
                      <div class="table-responsive">
                         <table class="table table-borderless table-centered table-nowrap">
                            <tbody>
+                              @foreach($usuarios as $usuario)
                               <tr>
-                                 <td class="cliente"><img src="{{ asset('assets/images/team') }}/team-1.jpg" class="rounded-circle " alt=""></td>
+                                 <td class="cliente"><img src="{{ asset('assets/images/team') }}/{{ $usuario->avatar}}.jpg" class="rounded-circle " alt=""></td>
                                  <td>
-                                    <h6 class="font-size-15 mb-1 fw-normal">Glenn Holden</h6>
-                                    <p class="text-muted font-size-13 mb-0"><i class="mdi mdi-map-marker"></i> Nevada</p>
+                                    <h6 class="font-size-15 mb-1 fw-normal">{{ $usuario->name}}</h6>
+                                    <p class="text-muted font-size-13 mb-0"><i class="mdi mdi-map-marker"></i>{{ $usuario->email}}</p>
                                  </td>
                                  <td><span class="badge rounded-pill bg-danger font-size-12">Cancel</span></td>
                                  <td class="text-muted fw-semibold text-end"><i class="icon-xs icon me-2 text-success" data-feather="trending-up"></i>$250.00</td>
                               </tr>
-                              <tr>
-                                 <td class="cliente"><img src="{{ asset('assets/images/team') }}/team-2.jpg" class="rounded-circle " alt=""></td>
-                                 <td>
-                                    <h6 class="font-size-15 mb-1 fw-normal">Lolita Hamill</h6>
-                                    <p class="text-muted font-size-13 mb-0"><i class="mdi mdi-map-marker"></i> Texas</p>
-                                 </td>
-                                 <td><span class="badge rounded-pill bg-success font-size-12">Success</span></td>
-                                 <td class="text-muted fw-semibold text-end"><i class="icon-xs icon me-2 text-danger" data-feather="trending-down"></i>$110.00</td>
-                              </tr>
-                              <tr>
-                                 <td class="cliente"><img src="{{ asset('assets/images/team') }}/team-3.jpg" class="rounded-circle " alt=""></td>
-                                 <td>
-                                    <h6 class="font-size-15 mb-1 fw-normal">Robert Mercer</h6>
-                                    <p class="text-muted font-size-13 mb-0"><i class="mdi mdi-map-marker"></i> California</p>
-                                 </td>
-                                 <td><span class="badge rounded-pill bg-info text-dark font-size-12">Active</span></td>
-                                 <td class="text-muted fw-semibold text-end"><i class="icon-xs icon me-2 text-success" data-feather="trending-up"></i>$420.00</td>
-                              </tr>
-                              <tr>
-                                 <td class="cliente"><img src="{{ asset('assets/images/team') }}/team-1.jpg" class="rounded-circle " alt=""></td>
-                                 <td>
-                                    <h6 class="font-size-15 mb-1 fw-normal">Marie Kim</h6>
-                                    <p class="text-muted font-size-13 mb-0"><i class="mdi mdi-map-marker"></i> Montana</p>
-                                 </td>
-                                 <td><span class="badge rounded-pill bg-warning text-dark-size-12">Pending</span></td>
-                                 <td class="text-muted fw-semibold text-end"><i class="icon-xs icon me-2 text-danger" data-feather="trending-down"></i>$120.00</td>
-                              </tr>
-                              <tr>
-                                 <td class="cliente"><img src="{{ asset('assets/images/team') }}/team-2.jpg" class="rounded-circle " alt=""></td>
-                                 <td>
-                                    <h6 class="font-size-15 mb-1 fw-normal">Sonya Henshaw</h6>
-                                    <p class="text-muted font-size-13 mb-0"><i class="mdi mdi-map-marker"></i> Colorado</p>
-                                 </td>
-                                 <td><span class="badge rounded-pill bg-info text-dark font-size-12">Active</span></td>
-                                 <td class="text-muted fw-semibold text-end"><i class="icon-xs icon me-2 text-success" data-feather="trending-up"></i>$112.00</td>
-                              </tr>
-                              <tr>
-                                 <td class="cliente"><img src="{{ asset('assets/images/team') }}/team-3.jpg" class="rounded-circle " alt=""></td>
-                                 <td>
-                                    <h6 class="font-size-15 mb-1 fw-normal">Marie Kim</h6>
-                                    <p class="text-muted font-size-13 mb-0"><i class="mdi mdi-map-marker"></i> Australia</p>
-                                 </td>
-                                 <td><span class="badge rounded-pill bg-success font-size-12">Success</span></td>
-                                 <td class="text-muted fw-semibold text-end"><i class="icon-xs icon me-2 text-danger" data-feather="trending-down"></i>$120.00</td>
-                              </tr>
-                              <tr>
-                                 <td class="cliente"><img src="{{ asset('assets/images/team') }}/team-2.jpg" class="rounded-circle " alt=""></td>
-                                 <td>
-                                    <h6 class="font-size-15 mb-1 fw-normal">Sonya Henshaw</h6>
-                                    <p class="text-muted font-size-13 mb-0"><i class="mdi mdi-map-marker"></i> India</p>
-                                 </td>
-                                 <td><span class="badge rounded-pill bg-danger font-size-12">Cancel</span></td>
-                                 <td class="text-muted fw-semibold text-end"><i class="icon-xs icon me-2 text-success" data-feather="trending-up"></i>$112.00</td>
-                              </tr>
+                              @endforeach
                            </tbody>
                         </table>
                      </div>

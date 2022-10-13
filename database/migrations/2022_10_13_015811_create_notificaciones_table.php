@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('notificaciones', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('notitipo_id');
+            $table->unsignedInteger('notitipos_id');
             $table->unsignedInteger('usuario_id');
             $table->string('asunto', 300);
             $table->mediumText('cuerpo');           

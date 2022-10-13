@@ -29,7 +29,7 @@ class CustomAuthController extends Controller
 
         if (Auth::attempt($credentials)) {
 
-            if (Auth::user()->role == 'admin') {
+            if (Auth::user()->rol == 1) {
 
             return redirect()->route('dashboard');
         
@@ -79,6 +79,7 @@ class CustomAuthController extends Controller
       return User::create([
         'name' => $data['name'],
         'email' => $data['email'],
+        'rol' => $data['rol'],
         'password' => Hash::make($data['password'])
       ]);
     }    

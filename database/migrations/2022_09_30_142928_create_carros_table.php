@@ -18,8 +18,8 @@ return new class extends Migration
             $table->timestamps();
             $table->unsignedInteger('usuario_id'); 
             $table->unsignedInteger('detcarros_id');     
-            $table->foreign('user_id')->references('id')->on('users');  
-            $table->foreign('detcarro_id')->references('id')->on('users');     
+            $table->foreign('usuario_id')->references('id')->on('users');  
+            $table->foreign('detcarros_id')->references('id')->on('detalle_carros');     
         });
     }
 

@@ -23,7 +23,7 @@ return new class extends Migration
             $table->integer('importante');
             $table->integer('marcado');
             $table->timestamps();
-            $table->foreign('mentipos_id')->references('id')->on('men_tipos');
+            $table->foreign('mentipo_id')->references('id')->on('men_tipos');
             $table->foreign('usuario_id')->references('id')->on('users');
         });
     }
