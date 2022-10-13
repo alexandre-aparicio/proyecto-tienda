@@ -13,10 +13,11 @@
                   </button>
                </li>
                <ul id="flush-collapse-{{ $menu->id }}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                  <li class="accordion-body">Lista 1</li>
-                  <li class="accordion-body">Lista 2</li>
-                  <li class="accordion-body">Lista 3</li>
-                  <li class="accordion-body">Lista 4</li>
+                  @foreach ($submenus as $submenu)
+                  @if ($submenu->dashmenu_id == $menu->id)
+                  <li class="accordion-body">{{ $submenu->titulo }}</li> 
+                  @endif                 
+                  @endforeach
                </ul>
             </ul>
             @endforeach
@@ -27,7 +28,15 @@
             <div class="col-lg-12">
                <div class="card">
                   <div class="card-body">
-                     <h4 class="card-title mb-4">Últimos Artículos</h4>
+                     <div class="row">                              
+                              <div class="col-sm-6 col-md-6">
+                                 <h4 class="card-title mb-4">Artículos</h4>
+                                 </div>
+                                 <div  class="col-sm-6 col-md-6 " >
+                                    <label> Buscar articulo: <input type="search"></label>
+                                 </div>
+                              
+                           </div>
                      <div class="">
                         <table class="table table-centered table-nowrap mb-0">
                            <thead class="table-light">
@@ -171,9 +180,7 @@
                               </div>
                            </div>
                            <div class="row">
-                              <div class="col-sm-12 col-md-5">
-                                 <div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">Showing 1 to 10 of 12 entries</div>
-                              </div>
+                              
                               <div class="col-sm-12 col-md-7">
                                  {{ $compras->links() }}
                               </div>

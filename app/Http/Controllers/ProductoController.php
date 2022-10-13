@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 use App\Models\Producto;
 use App\Models\Categoria;
@@ -55,10 +56,11 @@ class ProductoController extends Controller
         $usuarios = User::get();
         $compras = Compra::join('users', 'compras.usuario_id', '=', 'users.id')->select('compras.*' ,'users.name AS usr_nombre')->paginate(5, '[*]', 'compras');
         $menus = DashMenu::get();
+        $submenus = DB::table('dash_submenus')->get();
                
         
 
 
-        return view('dashboard.main-dash', ['articulos'=>$productos, 'usuarios'=>$usuarios, 'compras'=>$compras, 'menus'=>$menus]);        
+        return view('dashboard.main-dash', ['articulos'=>$productos, 'usuarios'=>$usuarios, 'compras'=>$compras, 'menus'=>$menus, 'submenus'=>$submenus]);        
     }
 }

@@ -12,11 +12,8 @@
 <section class="top-header">
    <div class="container-fluid mt-3">
       <div class="row">
-         <div class="col-2 p-3 ">.col</div>
-         <div class="col-4 p-3 ">
-            <ul class="list-group list-group-horizontal">
-               <!-- Site Logo -->
-               <li class="logo text-center">
+         <div class="col-2 p-3 ">
+            
                   <a href="index.html">
                      <!-- replace logo here -->
                      <svg width="135px" height="29px" viewBox="0 0 155 29" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +28,12 @@
                         </g>
                      </svg>
                   </a>
-               </li>
+               
+         </div>
+         <div class="col-4 p-3 ">
+            <ul class="list-group list-group-horizontal">
+               <!-- Site Logo -->
+               
                <!-- Search -->
                <li class="dropdown search dropdown-slide">
                   <a href="#!" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i
