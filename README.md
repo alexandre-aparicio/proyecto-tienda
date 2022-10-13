@@ -33,13 +33,6 @@ Se Trata de crear una página de comercio electrónico con en framework PHP Lara
 
 Se crea la base de datos MySQL con el sistema de migraciones. Se compone de las siguientes tablas.
 
-- usuarios
-- carro de la compra
-- categorias
-- productos
-- ventas
-- suscriptores
-
 <p align="center"><a href="https://aleaparicio.es/proyectos/modelo.png"><img src="https://aleaparicio.es/proyectos/modelo.png" width="600"  alt="Build Status"></a></p>
 
 ## Live Preview
@@ -66,6 +59,7 @@ Se crea la base de datos MySQL con el sistema de migraciones. Se compone de las 
 	- Paginación Multiple ✔ [How](https://www.codegrepper.com/code-examples/php/laravel+multiple+pagination+in+one+page)
 
 
+
 #### Apartado Página Pública
 - Menú Superior ✔
 	- Elementos de la cesta de la compra ❌
@@ -74,9 +68,10 @@ Se crea la base de datos MySQL con el sistema de migraciones. Se compone de las 
 	- Sección categorías destacadas ❌ 
 	- Sección productos más vendidos ❌
 - Paginación Simple✔ [How](https://codeanddeploy.com/blog/laravel/laravel-8-pagination-example-using-bootstrap-5)
+- Enlaces dinámicos ❌
 - Página de categorías
-- Página de articulos
-
+- Página de articulos ✔
+	- Valoraciones artículos ❌
 
 #### Footer
 - Formulario de suscripción ❌
