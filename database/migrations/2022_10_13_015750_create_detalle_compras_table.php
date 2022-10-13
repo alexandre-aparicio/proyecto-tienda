@@ -14,9 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('detalle_compras', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->unsignedInteger('producto_id');                      
+            $table->integer('cantidad');            
             $table->timestamps();
+            $table->foreign('producto_id')->references('id')->on('productos');
+            
         });
+        
     }
 
     /**

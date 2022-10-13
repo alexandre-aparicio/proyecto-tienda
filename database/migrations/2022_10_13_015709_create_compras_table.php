@@ -14,8 +14,17 @@ return new class extends Migration
     public function up()
     {
         Schema::create('compras', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('identificador', 300);
+            $table->unsignedInteger('usuario_id');
+            $table->unsignedInteger('detallecompra_id');
+            $table->double('total', 8, 2);
+            $table->mediumText('cuerpo');           
+            $table->string('imagen_url', 300);
             $table->timestamps();
+            $table->foreign('usuario_id')->references('id')->on('users');
+            $table->foreign('detallecompra_id')->references('id')->on('detalle_compras');
+        
         });
     }
 

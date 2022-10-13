@@ -14,8 +14,17 @@ return new class extends Migration
     public function up()
     {
         Schema::create('notificaciones', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->unsignedInteger('notitipo_id');
+            $table->unsignedInteger('usuario_id');
+            $table->string('asunto', 300);
+            $table->mediumText('cuerpo');           
+            $table->integer('leido');
+            $table->integer('importante');
+            $table->integer('marcado');
             $table->timestamps();
+            $table->foreign('notitipos_id')->references('id')->on('noti_tipos');
+            $table->foreign('usuario_id')->references('id')->on('users');
         });
     }
 

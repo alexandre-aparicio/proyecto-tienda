@@ -14,16 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('noti_tipo', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('nombre', 300);
             $table->timestamps();
+            $table->string('tipo_url', 300);
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+    
     public function down()
     {
         Schema::dropIfExists('noti_tipo');

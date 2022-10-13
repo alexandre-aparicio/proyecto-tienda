@@ -14,8 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('home_submenus', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->unsignedInteger('homesubmenu_id');
+            $table->string('titulo', 300);
+            $table->string('enlace', 300);
             $table->timestamps();
+            $table->string('icono', 300);
         });
     }
 
