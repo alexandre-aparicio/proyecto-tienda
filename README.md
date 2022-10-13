@@ -1,10 +1,5 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-
-</p>
-
 ## Sobre el Proyecto
 
 Se Trata de crear una página de comercio electrónico con en framework PHP Laravel. Esta tendrá un carro de la compra, diferentes categorias, un apartado de checkout, parte de comentarios del producto y los usuarios se podrán loguear.
@@ -33,7 +28,7 @@ Se Trata de crear una página de comercio electrónico con en framework PHP Lara
 
 Se crea la base de datos MySQL con el sistema de migraciones. Se compone de las siguientes tablas.
 
-<p align="center"><a href="https://aleaparicio.es/proyectos/modelo.png"><img src="https://aleaparicio.es/proyectos/modelo.png" width="600"  alt="Build Status"></a></p>
+<p align="center"><a href="https://aleaparicio.es/proyectos/modelo.png"><img src="https://aleaparicio.es/proyectos/modelo.png" width="500"  alt="Build Status"></a></p>
 
 ## Live Preview
 
