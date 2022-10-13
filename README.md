@@ -40,6 +40,8 @@ Se crea la base de datos MySQL con el sistema de migraciones. Se compone de las 
 - ventas
 - suscriptores
 
+<p align="center"><a href="https://aleaparicio.es/proyectos/modelo.png"><img src="https://aleaparicio.es/proyectos/modelo.png" width="600"  alt="Build Status"></a></p>
+
 ## Live Preview
 
 - [Ver la Tienda en funcionamiento](https://aleaparicio.es/proyecto-blog/public).

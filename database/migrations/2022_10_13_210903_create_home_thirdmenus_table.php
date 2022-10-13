@@ -13,14 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('home_submenus', function (Blueprint $table) {
+        Schema::create('home_thirdmenus', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('homemenu_id');
+            $table->unsignedInteger('homesubmenu_id');
             $table->string('titulo', 300);
             $table->string('enlace', 300);
             $table->timestamps();
             $table->string('icono', 300);
-            $table->foreign('homemenu_id')->references('id')->on('home_menus');
+            $table->foreign('homesubmenu_id')->references('id')->on('home_submenus');
         });
     }
 
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('home_submenus');
+        Schema::dropIfExists('homethird_menu');
     }
 };
