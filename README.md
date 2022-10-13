@@ -21,7 +21,12 @@ Se Trata de crear una página de comercio electrónico con en framework PHP Lara
 
 <p align="center"><a href="https://themefisher.com/"><img src="https://themefisher.com/images/logo/logo.svg" alt="Theme Fisher"></a></p>
 
-- Creado con una plantilla [ThemeFisher](https://themefisher.com/products/logbook) con licencia MIT  
+- Basado en una plantilla [ThemeFisher](https://demo.themefisher.com/aviato/) con licencia MIT  
+
+<p align="center">
+<a href="https://demo.themefisher.com/aviato/"><img src="https://themefisher.com/_next/image?url=https%3A%2F%2Fdemo.themefisher.com%2Fthumbnails%2Faviato.png&w=430&q=80" alt="Build Status"></a>
+
+</p>
 
 
 ## Base de datos

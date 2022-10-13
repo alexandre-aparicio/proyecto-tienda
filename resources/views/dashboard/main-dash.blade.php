@@ -15,32 +15,31 @@
                <ul id="flush-collapse-{{ $menu->id }}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                   @foreach ($submenus as $submenu)
                   @if ($submenu->dashmenu_id == $menu->id)
-                  <li class="accordion-body">{{ $submenu->titulo }}</li> 
+                  <li class="accordion-body">{{ $submenu->titulo }}</li>
                   @endif                 
                   @endforeach
                </ul>
             </ul>
             @endforeach
-            </div>
+         </div>
       </div>
       <div class="col-10 p-5">
          <div class="row mb-4">
             <div class="col-lg-12">
                <div class="card">
                   <div class="card-body">
-                     <div class="row">                              
-                              <div class="col-sm-6 col-md-6">
-                                 <h4 class="card-title mb-4">Artículos</h4>
-                                 </div>
-                                 <div  class="col-sm-6 col-md-6 " >
-                                    <label> Buscar articulo: <input type="search"></label>
-                                 </div>
-                              
-                           </div>
+                     <div class="row">
+                        <div class="col-sm-6 col-md-6">
+                           <h4 class="card-title mb-4">Artículos</h4>
+                        </div>
+                        <div  class="col-sm-6 col-md-6 " >
+                           <label> Buscar articulo: <input type="search"></label>
+                        </div>
+                     </div>
                      <div class="">
                         <table class="table table-centered table-nowrap mb-0">
                            <thead class="table-light">
-                              <tr>                                 
+                              <tr>
                                  <th>Artículo ID</th>
                                  <th>Imagen</th>
                                  <th>Nombre</th>
@@ -53,7 +52,7 @@
                            </thead>
                            <tbody>
                               @foreach ($articulos as $articulo)
-                              <tr>                                 
+                              <tr>
                                  <td><a href="#" class="text-body fw-bold">#MB2540</a> </td>
                                  <td class="product_table"><img src="{{ asset('assets/images/shop/products') }}/{{ $articulo->imagen_url }}.jpg"  alt=""></td>
                                  <td>{{ $articulo->nombre }}</td>
@@ -69,9 +68,9 @@
                                     <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light">
                                     View Details
                                     </button>
-                                 </td>                                 
-                              </tr> 
-                               @endforeach                         
+                                 </td>
+                              </tr>
+                              @endforeach                         
                            </tbody>
                         </table>
                      </div>
@@ -122,25 +121,22 @@
             </div>
             <div class="col-xl-8">
                <div class="card">
-
                   <div class="card-body">
                      <div class=" mb-4">
                         <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
-                           <div class="row">                              
+                           <div class="row">
                               <div class="col-sm-6 col-md-6">
                                  <h4 class="card-title mb-4">Compras realizadas</h4>
-                                 </div>
-                                 <div  class="col-sm-6 col-md-6 " >
-                                    <label>Búsqueda:<input type="search"></label>
-                                 </div>
-                              
+                              </div>
+                              <div  class="col-sm-6 col-md-6 " >
+                                 <label>Búsqueda:<input type="search"></label>
+                              </div>
                            </div>
                            <div class="row">
                               <div class="col-sm-11">
                                  <table class="table table-centered datatable dt-responsive nowrap table-card-list dataTable no-footer dtr-inline">
                                     <thead>
                                        <tr class="bg-transparent" role="row">
-                                          
                                           <th class="sorting"  rowspan="1" colspan="1" >Factura ID</th>
                                           <th class="sorting" rowspan="1" colspan="1" >Título</th>
                                           <th class="sorting" rowspan="1" colspan="1" >Billing Name</th>
@@ -180,7 +176,6 @@
                               </div>
                            </div>
                            <div class="row">
-                              
                               <div class="col-sm-12 col-md-7">
                                  {{ $compras->links() }}
                               </div>
@@ -194,4 +189,4 @@
       </div>
    </div>
 </section>
-@endsection  
+@endsection
