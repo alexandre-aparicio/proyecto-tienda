@@ -37,7 +37,7 @@ Se crea la base de datos MySQL con el sistema de migraciones. Se compone de las 
 
 ## Live Preview
 
-- [Ver el Blog en funcionamiento](https://aleaparicio.es/proyecto-blog/public).
+- [Ver la Tienda en funcionamiento](https://aleaparicio.es/proyecto-blog/public).
 
 ## Funcionalidades
 
@@ -51,19 +51,24 @@ Se crea la base de datos MySQL con el sistema de migraciones. Se compone de las 
 
 #### Apartado Panel de Control
 - Panel de Usuario ✔
+	- Menú Superior
+		- Sección Usuario ❌
+		- Sección Mensajes ❌
+		- Sección Notificaciones ❌
 	- Menú Lateral ✔ [How](https://getbootstrap.com/docs/5.0/components/accordion/)
 	- Paginación Multiple ✔ [How](https://www.codegrepper.com/code-examples/php/laravel+multiple+pagination+in+one+page)
 
 
-
-#### Apartado Páginas
+#### Apartado Página Pública
 - Menú Superior ✔
+	- Elementos de la cesta de la compra ❌
+	- Buscador con consulta asíncrona Ajax ❌
 - Main Home ✔
+	- Sección categorías destacadas ❌ 
+	- Sección productos más vendidos ❌
 - Paginación Simple✔ [How](https://codeanddeploy.com/blog/laravel/laravel-8-pagination-example-using-bootstrap-5)
-- Main Ver productos por categoría ❌ 
-- Main Ver productos por más vendidos ❌
-- Elementos de la cesta de la compra ❌
-- Buscador con consulta asíncrona Ajax ❌
+- Página de categorías
+- Página de articulos
 
 
 #### Footer

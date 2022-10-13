@@ -4,41 +4,23 @@
    <div class="row">
       <div class="col-2 p-2 ">
          <div class="accordion accordion-flush" id="accordionFlushExample">
+            @foreach ($menus as $menu)
             <ul class="accordion-item">
-               <li class="accordion-header" id="flush-headingOne">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+               <li class="accordion-header" id="flush-heading-{{ $menu->id }}">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-{{ $menu->id }}" aria-expanded="false" aria-controls="flush-collapse-{{ $menu->id }}">
                   <i
-                     class="tf-ion-ios-search-strong"></i><span> Acordeón artículo #1</span>
+                     class="tf-{{ $menu->icono }}"></i><span>{{ $menu->titulo }}</span>
                   </button>
                </li>
-               <ul id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+               <ul id="flush-collapse-{{ $menu->id }}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                   <li class="accordion-body">Lista 1</li>
                   <li class="accordion-body">Lista 2</li>
                   <li class="accordion-body">Lista 3</li>
                   <li class="accordion-body">Lista 4</li>
                </ul>
             </ul>
-            <div class="accordion-item">
-               <h2 class="accordion-header" id="flush-headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                  Acordeón artículo #2
-                  </button>
-               </h2>
-               <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">Contenido placeholder para este acordeón, que pretende demostrar la clase <code>.accordion-flush</code>. Este es el cuerpo del acordeón del segundo elemento. Imaginemos que esto se llena con algún contenido real.</div>
-               </div>
+            @endforeach
             </div>
-            <div class="accordion-item">
-               <h2 class="accordion-header" id="flush-headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                  Acordeón artículo #3
-                  </button>
-               </h2>
-               <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">Contenido placeholder para este acordeón, que pretende demostrar la clase <code>.accordion-flush</code>. Este es el cuerpo del acordeón del tercer elemento. No sucede nada más emocionante aquí en términos de contenido, sino simplemente llenar el espacio para que se vea, al menos a primera vista, un poco más representativo de cómo se vería esto en una aplicación del mundo real.</div>
-               </div>
-            </div>
-         </div>
       </div>
       <div class="col-10 p-5">
          <div class="row mb-4">
@@ -46,7 +28,7 @@
                <div class="card">
                   <div class="card-body">
                      <h4 class="card-title mb-4">Últimos Artículos</h4>
-                     <div class="table-responsive">
+                     <div class="">
                         <table class="table table-centered table-nowrap mb-0">
                            <thead class="table-light">
                               <tr>                                 
@@ -131,28 +113,32 @@
             </div>
             <div class="col-xl-8">
                <div class="card">
+
                   <div class="card-body">
-                     <div class="table-responsive mb-4">
+                     <div class=" mb-4">
                         <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
-                           <div class="row">
-                              <div class="col-sm-12 col-md-6"></div>
-                              <div class="col-sm-12 col-md-6">
-                                 <div id="DataTables_Table_0_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="DataTables_Table_0"></label></div>
-                              </div>
+                           <div class="row">                              
+                              <div class="col-sm-6 col-md-6">
+                                 <h4 class="card-title mb-4">Compras realizadas</h4>
+                                 </div>
+                                 <div  class="col-sm-6 col-md-6 " >
+                                    <label>Búsqueda:<input type="search"></label>
+                                 </div>
+                              
                            </div>
                            <div class="row">
-                              <div class="col-sm-12">
-                                 <table class="table table-centered datatable dt-responsive nowrap table-card-list dataTable no-footer dtr-inline" style="border-collapse: collapse; border-spacing: 0px 12px; width: 100%;" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+                              <div class="col-sm-11">
+                                 <table class="table table-centered datatable dt-responsive nowrap table-card-list dataTable no-footer dtr-inline">
                                     <thead>
                                        <tr class="bg-transparent" role="row">
                                           
-                                          <th class="sorting"  rowspan="1" colspan="1" style="width: 120px;">Factura ID</th>
-                                          <th class="sorting" rowspan="1" colspan="1" style="width: 179px;" >Título</th>
-                                          <th class="sorting" rowspan="1" colspan="1" style="width: 239px;" >Billing Name</th>
-                                          <th class="sorting" rowspan="1" colspan="1" style="width: 155px;" >Amount</th>
-                                          <th class="sorting" rowspan="1" colspan="1" style="width: 135px;">Status</th>
-                                          <th class="sorting" rowspan="1" colspan="1" style="width: 239px;">Download Pdf</th>
-                                          <th class="sorting" rowspan="1" colspan="1" style="width: 120px;">Action</th>
+                                          <th class="sorting"  rowspan="1" colspan="1" >Factura ID</th>
+                                          <th class="sorting" rowspan="1" colspan="1" >Título</th>
+                                          <th class="sorting" rowspan="1" colspan="1" >Billing Name</th>
+                                          <th class="sorting" rowspan="1" colspan="1" >Amount</th>
+                                          <th class="sorting" rowspan="1" colspan="1" >Status</th>
+                                          <th class="sorting" rowspan="1" colspan="1" >Pdf</th>
+                                          <th class="sorting" rowspan="1" colspan="1" >Action</th>
                                        </tr>
                                     </thead>
                                     <tbody>
