@@ -51,12 +51,16 @@ Se crea la base de datos MySQL con el sistema de migraciones. Se compone de las 
 
 #### Apartado Panel de Control
 - Panel de Usuario ✔
-- Paginación [How](https://codeanddeploy.com/blog/laravel/laravel-8-pagination-example-using-bootstrap-5)✔
+	- Menú Lateral ✔ [How](https://getbootstrap.com/docs/5.0/components/accordion/)
+	- Paginación Multiple ✔ [How](https://www.codegrepper.com/code-examples/php/laravel+multiple+pagination+in+one+page)
+
+
 
 #### Apartado Páginas
 - Menú Superior ✔
 - Main Home ✔
-- Main Ver productos por categoría ❌ Pendiante de hacer
+- Paginación Simple✔ [How](https://codeanddeploy.com/blog/laravel/laravel-8-pagination-example-using-bootstrap-5)
+- Main Ver productos por categoría ❌ 
 - Main Ver productos por más vendidos ❌
 - Elementos de la cesta de la compra ❌
 - Buscador con consulta asíncrona Ajax ❌

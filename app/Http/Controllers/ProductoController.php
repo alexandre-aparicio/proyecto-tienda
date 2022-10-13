@@ -8,6 +8,7 @@ use App\Models\Producto;
 use App\Models\Categoria;
 use App\Models\Carro;
 use App\Models\User;
+use App\Models\Compra;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -48,12 +49,14 @@ class ProductoController extends Controller
 
         
         // Esta es la formula para emplear el paginate con un join
-        $productos = Producto::join('categorias', 'productos.categoria_id', '=', 'categorias.id')->select('productos.*' ,'categorias.nombre AS cat_nombre')->paginate(5);
+        $productos = Producto::join('categorias', 'productos.categoria_id', '=', 'categorias.id')->select('productos.*' ,'categorias.nombre AS cat_nombre')->paginate(1, '[*]', 'products');
+
         $usuarios = User::get();
+        $compras = Compra::join('users', 'compras.usuario_id', '=', 'users.id')->select('compras.*' ,'users.name AS usr_nombre')->paginate(1);
                
         
 
 
-        return view('dashboard.main-dash', ['articulos'=>$productos, 'usuarios'=>$usuarios]);        
+        return view('dashboard.main-dash', ['articulos'=>$productos, 'usuarios'=>$usuarios, 'compras'=>$compras]);        
     }
 }

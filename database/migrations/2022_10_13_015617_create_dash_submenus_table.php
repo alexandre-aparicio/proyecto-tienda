@@ -15,11 +15,12 @@ return new class extends Migration
     {
         Schema::create('dash_submenus', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('homesubmenu_id');
+            $table->unsignedInteger('dashmenu_id');            
             $table->string('titulo', 300);
             $table->string('enlace', 300);
             $table->timestamps();
-            $table->string('icono', 300);            
+            $table->string('icono', 300);
+            $table->foreign('dashmenu_id')->references('id')->on('dash_menus');             
             
         });
     }

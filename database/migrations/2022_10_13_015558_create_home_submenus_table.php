@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('enlace', 300);
             $table->timestamps();
             $table->string('icono', 300);
+            $table->foreign('homesubmenu_id')->references('id')->on('home_menus');
         });
     }
 

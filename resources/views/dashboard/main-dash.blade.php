@@ -84,7 +84,7 @@
                            </tbody>
                         </table>
                      </div>
-                     <!-- end table-responsive -->
+                     {!! $articulos->render() !!}
                   </div>
                </div>
             </div>
@@ -157,14 +157,14 @@
                                     </thead>
                                     <tbody>
                                        <tr role="row" class="odd">
-                                          
-                                          <td><a href="#" class="text-dark fw-bold">#MN0131</a> </td>
+                                          @foreach ($compras as $compra)
+                                          <td><a href="#" class="text-dark fw-bold">{{ $compra->identificador }}</a> </td>
                                           <td>
                                              10 Jul, 2020
                                           </td>
-                                          <td>Connie Franco</td>
+                                          <td>{{ $compra->usr_nombre }}</td>
                                           <td>
-                                             $141
+                                             {{ $compra->total }}
                                           </td>
                                           <td>
                                              <div class="badge bg-soft-success font-size-12">Paid</div>
@@ -179,144 +179,7 @@
                                              <a href="#" class="px-3 text-danger"><i class="uil uil-trash-alt font-size-18"></i></a>
                                           </td>
                                        </tr>
-                                       <tr role="row" class="odd">
-                                          
-                                          <td><a href="#" class="text-dark fw-bold">#MN0131</a> </td>
-                                          <td>
-                                             10 Jul, 2020
-                                          </td>
-                                          <td>Connie Franco</td>
-                                          <td>
-                                             $141
-                                          </td>
-                                          <td>
-                                             <div class="badge bg-soft-success font-size-12">Paid</div>
-                                          </td>
-                                          <td>
-                                             <div>
-                                                <button class="btn btn-light btn-sm w-xs">Pdf <i class="uil uil-download-alt ms-2"></i></button>
-                                             </div>
-                                          </td>
-                                          <td>
-                                             <a href="#" class="px-3 text-primary"><i class="uil uil-pen font-size-18"></i></a>
-                                             <a href="#" class="px-3 text-danger"><i class="uil uil-trash-alt font-size-18"></i></a>
-                                          </td>
-                                       </tr>
-                                       <tr role="row" class="odd">
-                                          
-                                          <td><a href="#" class="text-dark fw-bold">#MN0131</a> </td>
-                                          <td>
-                                             10 Jul, 2020
-                                          </td>
-                                          <td>Connie Franco</td>
-                                          <td>
-                                             $141
-                                          </td>
-                                          <td>
-                                             <div class="badge bg-soft-success font-size-12">Paid</div>
-                                          </td>
-                                          <td>
-                                             <div>
-                                                <button class="btn btn-light btn-sm w-xs">Pdf <i class="uil uil-download-alt ms-2"></i></button>
-                                             </div>
-                                          </td>
-                                          <td>
-                                             <a href="#" class="px-3 text-primary"><i class="uil uil-pen font-size-18"></i></a>
-                                             <a href="#" class="px-3 text-danger"><i class="uil uil-trash-alt font-size-18"></i></a>
-                                          </td>
-                                       </tr>
-                                       <tr role="row" class="odd">
-                                          
-                                          <td><a href="#" class="text-dark fw-bold">#MN0131</a> </td>
-                                          <td>
-                                             10 Jul, 2020
-                                          </td>
-                                          <td>Connie Franco</td>
-                                          <td>
-                                             $141
-                                          </td>
-                                          <td>
-                                             <div class="badge bg-soft-success font-size-12">Paid</div>
-                                          </td>
-                                          <td>
-                                             <div>
-                                                <button class="btn btn-light btn-sm w-xs">Pdf <i class="uil uil-download-alt ms-2"></i></button>
-                                             </div>
-                                          </td>
-                                          <td>
-                                             <a href="#" class="px-3 text-primary"><i class="uil uil-pen font-size-18"></i></a>
-                                             <a href="#" class="px-3 text-danger"><i class="uil uil-trash-alt font-size-18"></i></a>
-                                          </td>
-                                       </tr>
-                                       <tr role="row" class="odd">
-                                          
-                                          <td><a href="#" class="text-dark fw-bold">#MN0131</a> </td>
-                                          <td>
-                                             10 Jul, 2020
-                                          </td>
-                                          <td>Connie Franco</td>
-                                          <td>
-                                             $141
-                                          </td>
-                                          <td>
-                                             <div class="badge bg-soft-success font-size-12">Paid</div>
-                                          </td>
-                                          <td>
-                                             <div>
-                                                <button class="btn btn-light btn-sm w-xs">Pdf <i class="uil uil-download-alt ms-2"></i></button>
-                                             </div>
-                                          </td>
-                                          <td>
-                                             <a href="#" class="px-3 text-primary"><i class="uil uil-pen font-size-18"></i></a>
-                                             <a href="#" class="px-3 text-danger"><i class="uil uil-trash-alt font-size-18"></i></a>
-                                          </td>
-                                       </tr>
-                                       <tr role="row" class="odd">
-                                          
-                                          <td><a href="#" class="text-dark fw-bold">#MN0131</a> </td>
-                                          <td>
-                                             10 Jul, 2020
-                                          </td>
-                                          <td>Connie Franco</td>
-                                          <td>
-                                             $141
-                                          </td>
-                                          <td>
-                                             <div class="badge bg-soft-success font-size-12">Paid</div>
-                                          </td>
-                                          <td>
-                                             <div>
-                                                <button class="btn btn-light btn-sm w-xs">Pdf <i class="uil uil-download-alt ms-2"></i></button>
-                                             </div>
-                                          </td>
-                                          <td>
-                                             <a href="#" class="px-3 text-primary"><i class="uil uil-pen font-size-18"></i></a>
-                                             <a href="#" class="px-3 text-danger"><i class="uil uil-trash-alt font-size-18"></i></a>
-                                          </td>
-                                       </tr>
-                                       <tr role="row" class="odd">
-                                          
-                                          <td><a href="#" class="text-dark fw-bold">#MN0131</a> </td>
-                                          <td>
-                                             10 Jul, 2020
-                                          </td>
-                                          <td>Connie Franco</td>
-                                          <td>
-                                             $141
-                                          </td>
-                                          <td>
-                                             <div class="badge bg-soft-success font-size-12">Paid</div>
-                                          </td>
-                                          <td>
-                                             <div>
-                                                <button class="btn btn-light btn-sm w-xs">Pdf <i class="uil uil-download-alt ms-2"></i></button>
-                                             </div>
-                                          </td>
-                                          <td>
-                                             <a href="#" class="px-3 text-primary"><i class="uil uil-pen font-size-18"></i></a>
-                                             <a href="#" class="px-3 text-danger"><i class="uil uil-trash-alt font-size-18"></i></a>
-                                          </td>
-                                       </tr>
+                                       @endforeach
                                     </tbody>
                                  </table>
                               </div>
@@ -326,14 +189,7 @@
                                  <div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">Showing 1 to 10 of 12 entries</div>
                               </div>
                               <div class="col-sm-12 col-md-7">
-                                 <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate">
-                                    <ul class="pagination">
-                                       <li class="paginate_button page-item previous disabled" id="DataTables_Table_0_previous"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
-                                       <li class="paginate_button page-item active"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
-                                       <li class="paginate_button page-item "><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0" class="page-link">2</a></li>
-                                       <li class="paginate_button page-item next" id="DataTables_Table_0_next"><a href="#" aria-controls="DataTables_Table_0" data-dt-idx="3" tabindex="0" class="page-link">Next</a></li>
-                                    </ul>
-                                 </div>
+                                 {{ $compras->links() }}
                               </div>
                            </div>
                         </div>
