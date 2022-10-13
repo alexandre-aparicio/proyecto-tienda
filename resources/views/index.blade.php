@@ -8,7 +8,7 @@
                 <div class="product-item">
                     <div class="product-thumb">
                         <span class="bage">Sale</span>
-                        <img class="img-responsive" src="{{ asset('images/shop/products') }}/{{ $producto->imagen_url }}" alt="product-img" />
+                        <img class="img-responsive" src="{{ asset('images/shop/products') }}/{{ $producto->imagen_url }}.jpg" alt="product-img" />
                         <div class="preview-meta">
                             <ul>
                                 <li>

@@ -40,8 +40,9 @@
  @else
     @include('common-components.top-header') 
     @include('common-components.top-nav-menu')
+    @yield('content') 
     @include('common-components.footer')
-    @yield('content')    
+       
 
 @endif
                            

@@ -37,6 +37,7 @@ class CustomAuthController extends Controller
 
             return redirect()->intended('/')->withSuccess('Signed in');
         }
+
         }
   
         return redirect("login")->withSuccess('Login details are not valid');
@@ -80,6 +81,7 @@ class CustomAuthController extends Controller
         'name' => $data['name'],
         'email' => $data['email'],
         'rol' => $data['rol'],
+        'avatar' => $data['avatar'],
         'password' => Hash::make($data['password'])
       ]);
     }    
@@ -88,7 +90,7 @@ class CustomAuthController extends Controller
     {
         if(Auth::check()){
 
-            if (Auth::user()->role == "admin" ) {
+            if (Auth::user()->rol == 1 ) {
                 
                 return Redirect(route('dashboard-main'));
             }
