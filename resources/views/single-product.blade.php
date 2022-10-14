@@ -1,5 +1,7 @@
 @extends ('layouts.base')
+
 @section('content')
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 <div class="container">
    <div class="row mt-20">
       <div class="col-md-5">
@@ -29,22 +31,31 @@
             <h2>{{$datos[0]->nombre}}</h2>
             <p class="product-price">{{$datos[0]->precio}}</p>
             <div class="product-description mt-20">
-               {{ $datos[0]->descripcion }}
+               {!! $datos[0]->descripcion !!}
             </div>
             <div class="product-quantity">
-               <span>Quantity:</span>
+               <span>Cantidad:</span>
                <div class="product-quantity-slider">
                   <div class="input-group bootstrap-touchspin"><span class="input-group-btn"><button class="btn btn-default bootstrap-touchspin-down" type="button">-</button></span><span class="input-group-addon bootstrap-touchspin-prefix" style="display: none;"></span><input id="product-quantity" type="text" value="0" name="product-quantity" class="form-control" style="display: block;"><span class="input-group-addon bootstrap-touchspin-postfix" style="display: none;"></span><span class="input-group-btn"><button class="btn btn-default bootstrap-touchspin-up" type="button">+</button></span></div>
                </div>
             </div>
             <div class="product-category">
-               <span>Categories:</span>
+               <span>Categoria:</span>
                <ul>
-                  <li><a href="product-single.html">Products</a></li>
-                  <li><a href="product-single.html">Soap</a></li>
+               	  
+               	 
+               	 @foreach ($breadcrumb as $br)
+
+               	 @if ($loop->last)
+        <li><a href="product-single.html">{{ $br }}</a></li>
+    							@endif
+                  
+                  @endforeach
+                  
+                  
                </ul>
             </div>
-            <a href="cart.html" class="btn btn-main mt-20">Add To Cart</a>
+            <a href="cart.html" class="btn btn-main mt-20">Añadir al carro</a>
          </div>
       </div>
    </div>

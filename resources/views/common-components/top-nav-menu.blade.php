@@ -3,13 +3,15 @@
 	<nav class="navbar navigation">
 		<div class="container">
 			
-			<div class="col-md-4">
-				<div class="content">
+			<div class="col-md-4 ">
+				<div class="content product-category">
 					<h1 class="page-name">Shop</h1>
-					<ol class="breadcrumb">
+					<ul >
 						<li><a href="index.html">Home</a></li>
-						<li class="active">shop</li>
-					</ol>
+						@foreach ($breadcrumb as $br)
+                  <li><a href="product-single.html">{{$br}}</a></li>
+                  @endforeach
+					</ul>
 				</div>
 			</div>
 		

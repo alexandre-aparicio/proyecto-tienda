@@ -53,8 +53,6 @@ Se crea la base de datos MySQL con el sistema de migraciones. Se compone de las 
 	- Menú Lateral ✔ [How](https://getbootstrap.com/docs/5.0/components/accordion/)
 	- Paginación Multiple ✔ [How](https://www.codegrepper.com/code-examples/php/laravel+multiple+pagination+in+one+page)
 
-
-
 #### Apartado Página Pública
 - Menú Superior ✔
 	- Elementos de la cesta de la compra ❌

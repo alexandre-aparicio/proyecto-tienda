@@ -13,17 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('productos', function (Blueprint $table) {
+        Schema::create('cat_padres', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('catpadrote_id'); 
-            $table->timestamps();
-            $table->double('precio', 8, 2);
+            $table->unsignedInteger('categoria_id');
             $table->string('nombre', 300);
-            $table->string('descripcion');            
-            $table->string('imagen_url', 300); 
-            $table->foreign('catpadrote_id')->references('id')->on('cat_padrotes');           
-                      
-             
+            $table->timestamps();
+            $table->string('imagen_url', 300);            
+            $table->foreign('categoria_id')->references('id')->on('categorias');
         });
     }
 
@@ -34,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('productos');
+        Schema::dropIfExists('cat_padres');
     }
 };

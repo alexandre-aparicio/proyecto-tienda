@@ -19,13 +19,12 @@ class ProductoController extends Controller
     public function index()
     {
 
-        $productos = Producto::join('categorias', 'categorias.id', '=', 'productos.categoria_id')
-        ->get(['productos.*', 'categorias.nombre AS categoria_nombre']);
+        $productos = Producto::get();
 
-        $categorias = Categoria::get(); 
+        $breadcrumb = []; 
         
 
-        return view('index', ['categorias' => $categorias, 'categoria_act' => null, 'productos'=>$productos]);        
+        return view('index', ['breadcrumb' => $breadcrumb,  'productos'=>$productos]);        
     }
 
     public function show( Producto $id)
@@ -34,11 +33,29 @@ class ProductoController extends Controller
         
 
              $datos = Producto::where('id', $id->id)->get();
+            $breadcrumb = []; 
+             
+
+             $cat_padrotes = DB::table('cat_padrotes')->where('id', $id->catpadrote_id)->get();
+             
+             $cat_padrote = $cat_padrotes[0]->nombre;
+             
+             $cat_padres = DB::table('cat_padres')->where('id', $cat_padrotes[0]->categoriapadre_id)->get();
+             $cat_padre = $cat_padres[0]->nombre;
+             $categorias = DB::table('categorias')->where('id', $cat_padres[0]->categoria_id)->get();
+             $categoria = $categorias[0]->nombre;
+             
+             
+             
+             array_push($breadcrumb, $categoria);
+            array_push($breadcrumb, $cat_padre);
+            array_push($breadcrumb, $cat_padrote);
              $imagenes = DB::table('imagen_productos')->where('producto_id', $id->id)->get();
+
              
 
         
-        return view('single-product', ['datos'=>$datos, 'imagenes'=>$imagenes]);
+        return view('single-product', ['datos'=>$datos, 'imagenes'=>$imagenes, 'breadcrumb'=>$breadcrumb]);
     }
 
     public function dashArticles()
@@ -50,7 +67,7 @@ class ProductoController extends Controller
 
         
         // Esta es la formula para emplear el paginate con un join
-        $productos = Producto::join('categorias', 'productos.categoria_id', '=', 'categorias.id')->select('productos.*' ,'categorias.nombre AS cat_nombre')->paginate(2, '[*]', 'products');
+        $productos = Producto::select()->paginate(2, '[*]', 'products');
 
         $usuarios = User::get();
         $compras = Compra::join('users', 'compras.usuario_id', '=', 'users.id')->select('compras.*' ,'users.name AS usr_nombre')->paginate(5, '[*]', 'compras');
